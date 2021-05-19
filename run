@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# https://github.com/libgdx/packr
+
 rm -rf jpipeline-macos
 rm -rf jpipeline-windows
 
@@ -8,18 +11,21 @@ cd jpipeline
 cp jpipeline-javafx-client/build/libs/jpipeline-javafx-client.jar ../jpipeline-javafx-client.jar
 cd ../
 
-rm -rf jpipeline
 
 java -jar packr-all-4.0.0.jar \
      --platform mac \
-     --jdk OpenJDK11U-jre_x64_mac_hotspot_11.0.11_9.tar.gz \
+     --jdk https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jre_x64_mac_hotspot_11.0.11_9.tar.gz \
      --useZgcIfSupportedOs \
      --output jpipeline-macos \
      -- params.json
 
 java -jar packr-all-4.0.0.jar \
      --platform windows64 \
-     --jdk OpenJDK11U-jre_x64_windows_hotspot_11.0.11_9.zip \
+     --jdk https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jre_x64_windows_hotspot_11.0.11_9.zip \
      --useZgcIfSupportedOs \
      --output jpipeline-windows \
      -- params.json
+
+rm -rf jpipeline
+rm jpipeline-javafx-client.jar
+
