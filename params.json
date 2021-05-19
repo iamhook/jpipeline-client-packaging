@@ -1,0 +1,11 @@
+{
+    "executable": "jpipeline",
+    "classpath": [
+        "jpipeline-javafx-client.jar"
+    ],
+    "mainclass": "com.jpipeline.javafxclient.Main",
+    "vmargs": [
+       "Xmx1G"
+    ],
+    "minimizejre": "soft"
+}
