@@ -1,11 +1,14 @@
 {
     "executable": "jpipeline",
     "classpath": [
-        "jpipeline-javafx-client.jar"
+        "jpipeline/jpipeline-javafx-client/build/libs/jpipeline-javafx-client.jar"
     ],
     "mainclass": "com.jpipeline.javafxclient.Main",
     "vmargs": [
        "Xmx1G"
+    ],
+    "resources": [
+        "jpipeline/jpipeline-javafx-client/ext-resources"
     ],
     "minimizejre": "soft"
 }
