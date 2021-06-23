@@ -3,6 +3,8 @@
     "classpath": [
         "jpipeline/jpipeline-javafx-client/build/libs/jpipeline-javafx-client.jar"
     ],
+    "platform": "mac",
+    "jdk": "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.11%2B9/OpenJDK11U-jre_x64_mac_hotspot_11.0.11_9.tar.gz",
     "mainclass": "com.jpipeline.javafxclient.Main",
     "vmargs": [
        "Xmx1G"
@@ -10,5 +12,6 @@
     "resources": [
         "jpipeline/jpipeline-javafx-client/ext-resources"
     ],
-    "minimizejre": "soft"
+    "minimizejre": "soft",
+    "output": "jpipeline-macos"
 }
